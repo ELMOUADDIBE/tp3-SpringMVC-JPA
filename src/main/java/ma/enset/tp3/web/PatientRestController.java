@@ -1,7 +1,7 @@
 package ma.enset.tp3.web;
 
-import ma.enset.tp2hibernatejpaspring.entities.Patient;
-import ma.enset.tp2hibernatejpaspring.repository.PatientRepository;
+import ma.enset.tp3.entities.Patient;
+import ma.enset.tp3.repository.PatientRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;

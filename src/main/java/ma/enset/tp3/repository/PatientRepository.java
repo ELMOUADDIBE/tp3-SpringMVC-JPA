@@ -1,6 +1,6 @@
 package ma.enset.tp3.repository;
 
-import ma.enset.tp2hibernatejpaspring.entities.Patient;
+import ma.enset.tp3.entities.Patient;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;

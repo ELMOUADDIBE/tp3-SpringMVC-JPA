@@ -1,14 +1,14 @@
 package ma.enset.tp3.service;
 
 import jakarta.transaction.Transactional;
-import ma.enset.tp2hibernatejpaspring.entities.Consultation;
-import ma.enset.tp2hibernatejpaspring.entities.Medecin;
-import ma.enset.tp2hibernatejpaspring.entities.Patient;
-import ma.enset.tp2hibernatejpaspring.entities.RendezVous;
-import ma.enset.tp2hibernatejpaspring.repository.ConsulatationRepository;
-import ma.enset.tp2hibernatejpaspring.repository.MedecinRepository;
-import ma.enset.tp2hibernatejpaspring.repository.PatientRepository;
-import ma.enset.tp2hibernatejpaspring.repository.RendezVousRepository;
+import ma.enset.tp3.entities.Consultation;
+import ma.enset.tp3.entities.Medecin;
+import ma.enset.tp3.entities.Patient;
+import ma.enset.tp3.entities.RendezVous;
+import ma.enset.tp3.repository.ConsulatationRepository;
+import ma.enset.tp3.repository.MedecinRepository;
+import ma.enset.tp3.repository.PatientRepository;
+import ma.enset.tp3.repository.RendezVousRepository;
 import org.springframework.stereotype.Service;
 
 @Service @Transactional

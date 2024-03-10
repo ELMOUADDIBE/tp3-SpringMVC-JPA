@@ -1,9 +1,9 @@
 package ma.enset.tp3.service;
 
-import ma.enset.tp2hibernatejpaspring.entities.Consultation;
-import ma.enset.tp2hibernatejpaspring.entities.Medecin;
-import ma.enset.tp2hibernatejpaspring.entities.Patient;
-import ma.enset.tp2hibernatejpaspring.entities.RendezVous;
+import ma.enset.tp3.entities.Consultation;
+import ma.enset.tp3.entities.Medecin;
+import ma.enset.tp3.entities.Patient;
+import ma.enset.tp3.entities.RendezVous;
 
 public interface IHospital {
     Patient savePatient(Patient p);
