@@ -26,7 +26,7 @@ public class Tp3SpringMvcJpaApplication {
 			p1.setScore(2300);
 			iHospital.savePatient(p1);
 
-			Patient p2 = new Patient(-1,"Youssef",new Date(), false, 500,null);
+			iHospital.savePatient(new Patient(-1,"Youssef",new Date(), false, 500,null));
 
 			Patient p3 = Patient.builder()
 					.name("Imane")
@@ -34,6 +34,7 @@ public class Tp3SpringMvcJpaApplication {
 					.malade(false)
 					.score(100)
 					.build();
+			patientRepository.save(p3);
 		};
 	}
 }
