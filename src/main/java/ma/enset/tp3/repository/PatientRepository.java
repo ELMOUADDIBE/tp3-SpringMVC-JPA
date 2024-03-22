@@ -15,4 +15,5 @@ public interface PatientRepository extends JpaRepository<Patient, Long>{
     Patient findByName(String name);
     @Query("select p from Patient p where p.name like :x")
     List<Patient> search(@Param("x") String mc);
+
 }

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" layout:decorate="template1">
 <head>
     <meta charset="UTF-8">
     <title>Patients</title>
@@ -7,13 +7,14 @@
     <link rel="stylesheet" href="/webjars/bootstrap-icons/1.11.2/font/bootstrap-icons.css">
 </head>
 <body>
+    <div layout:fragment="content1">
 <div>
     <div class="card">
         <div class="card-header">
             <h3>Patients</h3>
         </div>
         <div class="card-body">
-            <form th:action="@{/index}" method="get">
+            <form th:action="@{/user/index}" method="get">
                 <div class="input-group mb-3">
                     <input type="text" th:value="${name}" class="form-control" placeholder="Search" name="search">
                     <button class="btn btn-outline-secondary" type="submit">Search <i class="bi bi-search"></i> </button>
@@ -34,9 +35,9 @@
                     <td th:text="${p.dateNaissance}"></td>
                     <td th:text="${p.malade}"></td>
                     <td th:text="${p.score}"></td>
-                    <td>
-                        <a th:href="@{/edit/{id}(id=${p.id})}" class="btn btn-primary">Edit</a>
-                        <a onclick="return confirm('Are you sure ?')" th:href="@{delete(id=${p.id})}" class="btn btn-danger">Delete</a>
+                    <td th:if="${#authorization.expression('hasRole(''ADMIN'')')}">
+                        <a th:href="@{/admin/edit(id=${p.id},search=${name},page=${currentPage})}" class="btn btn-primary">Edit</a>
+                        <a onclick="return confirm('Are you sure ?')" th:href="@{/delete(id=${p.id},search=${name},page=${currentPage},size=${#lists.size(patients)})}" class="btn btn-danger">Delete</a>
                     </td>
                 </tr>
                 </thead>
@@ -44,13 +45,14 @@
             <ul class="nav nav-pills">
                 <li class="nav-item" th:each="page,status:${pages}">
                     <a class="nav-link ms-2"
-                       th:href=" @{/index(page=${status.index},search=${name})}"
+                       th:href=" @{/user/index(page=${status.index},search=${name})}"
                        th:classappend="${status.index==currentPage} ? 'active' : ''"
-                       th:text="${status.index}"></a>
+                       th:text="${status.index} +1"></a>
                 </li>
             </ul>
         </div>
     </div>
 </div>
+    </div>
 </body>
 </html>
