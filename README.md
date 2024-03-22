@@ -30,7 +30,7 @@ Avant de commencer, assurez-vous que les outils suivants sont installés et conf
 
 - JDK 11 ou version supérieure.
 - Maven 3.6 ou version supérieure.
-- Un IDE de votre choix (Eclipse, IntelliJ IDEA, VS Code, etc.) avec support pour Lombok.
+- Un IDE (Eclipse, IntelliJ IDEA, VS Code, etc.) avec support pour Lombok.
 - Serveur de base de données (H2 pour le développement, MySQL pour la production).
 
 ### Installation
@@ -38,4 +38,4 @@ Avant de commencer, assurez-vous que les outils suivants sont installés et conf
 1. **Clonez le dépôt GitHub** :
 
 ```bash
-git clone https://exemple.com/repo/gestion-patients.git
+git clone https://github.com/ELMOUADDIBE/tp3-SpringMVC-JPA.git
